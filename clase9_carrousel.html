@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style media="screen">
+  body {
+    margin: 0px;
+  }
+  .carrousel {
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+  }
+  .carrousel__container{
+    white-space: nowrap;
+    margin: 70px 0px; /* espacio para el hover */
+    padding-bottom: 10px; /* para que no se corte las img en el hover */
+  }
+  .carrousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: palevioletred;
+    overflow: hidden; /* esconda lo que sobra en el radio */
+    margin-right: 10px;
+    display: inline-block; /*los elementos no tengan ese espacio hacia abajo */
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left; /* se queda en el centro, que vaya de izq a der */
+    position: relative;
+  }
+  .carrousel-item:hover ~ .carrousel-item {
+    transform: translate3d(100px, 0, 0); /*los elementos se transladan a la derecha, justo la mitad del tamaño del scale*/
+
+  }
+  .carrousel__container:hover .carrousel-item {
+    opacity: 0.3; /* al hacerle hover opaco todos */
+  }
+  .carrousel__container:hover .carrousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1; /*le doy opacidad al elemento particular */
+  }
+  .carrousel-item__img {
+    width: 200px;
+    height: 250px;
+    object-fit:cover;
+  }
+  .carrousel-item__details { /* para los detalles de bajo la img */
+    background: linear-gradient(to top. rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+    font-size: 10px;
+    opacity: 0; /*opacidad de la imagen */
+    transition: 450ms opacity; /*el gradiente se crea lentamente*/
+    padding: 10px;
+    position: absolute; /*overlay*/
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .carrousel-item__details:hover {
+    opacity: 1;
+
+  }
+
+
+
+</style>
+<body>
+  <section class="carrousel">
+    <div class="carrousel__container">
+      <div class="carrousel-item">
+        <img class="carrousel-item__img" src="https://i.imgur.com/ZRidWKh.jpg" alt="location: Popayán">
+        <div class="carrousel-item__details">
+          <div>
+            <img src="https://img.icons8.com/flat-round/64/000000/play--v1.png" alt="plau"/>
+            <img src="https://img.icons8.com/flat-round/64/000000/plus.png" alt="plus"/>
+          </div>
+          <p class="carrousel-item__details--title"> Atardecer Popayán </p>
+          <p class="carrousel-item__details--subtitle"> 2019 All Atardecer </p>
+
+        </div>
+      </div>
+      <div class="carrousel-item">
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

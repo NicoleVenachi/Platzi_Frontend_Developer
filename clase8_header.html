@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <title> Buscador </title>
+  </head>
+  <style media="screen">
+    body {
+      margin: 0px;
+      background-color: #AB88FF;
+      font-family: 'Mulish', sans-serif;
+    }
+    .header {
+      width: 100%;
+      height: 80px;
+      background-color: #AB88FF;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      /* background-color: #21C08B; */
+    }
+    .header__img {
+      width: 200px;
+      margin: 10px 0 0 10px;
+    }
+    .header__menu {
+      margin: 0 30px 0 0;
+    }
+    .header__menu ul {
+      list-style: none;
+      padding: 0px;
+      position: absolute;
+      width: 100px;
+      text-align: right;
+      margin: 0px -14px 0px 0px;
+      display: none;
+    }
+    .header__menu:hover ul, ul:hover {
+      display: block;
+    }
+    .header__menu li {
+      margin: 10px 0px;
+    }
+    .header__menu li a {
+      color: white;
+      text-decoration: none;
+    }
+    .header__menu li a:hover {
+      text-decoration: underline;
+    }
+    .header__menu--profile {
+      margin: 0 8px 0 0;
+      display: flex;
+      align-items: center;
+    }
+    .header__menu--profile img {
+      margin: 0 8px 0 0;
+      width: 40px;
+    }
+    .header__menu--profile p {
+      margin: 0px;
+      color: white;
+    }
+  </style>
+  <body>
+    <header class='header'>
+
+      <img class='header__img' src="./assets/logo-platzi-video.png" alt="">
+
+      <div class="header__menu">
+        <div class="header__menu--profile">
+          <img src="./assets/profile-platzi-video.png" alt="User">
+          <p> Perfil </p>
+        </div>
+        <ul>
+          <li> <a href="/"> Cuenta </a> </li>
+          <li> <a href="/"> Cerrar Sesión </a> </li>
+        </ul>
+      </div>
+
+    </header>
+  </body>
+</html>
